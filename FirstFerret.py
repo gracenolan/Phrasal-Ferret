@@ -11,10 +11,13 @@ if len(sys.argv) != 2:
   raise SystemExit
 elif fnmatch.fnmatch(sys.argv[1], "*.xml"): 
   filename = sys.argv[1]
-  tree = ET.parse(codecs.open(filename, encoding = "UTF-8", errors='replace')) # build tree
+  try:
+    tree = ET.parse(codecs.open(filename, encoding = "UTF-8", errors='replace')) # build tree. This is where the error is occuring!
+  except:
+    print "OH NO. Phrasal Ferret fell from the branch. PARSING ERROR (probably)"
   smellingBerries(tree)
 else:
-  print "Phrasel Ferret farts in your general direction"
+  print "Phrasel Ferret farts in your general direction."
 
 # Phrasal Ferret needs to find some berries to eat. Will he find anything?
 # He looks through the leaves (elements) to see what he can find
