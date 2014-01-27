@@ -11,12 +11,13 @@ if len(sys.argv) != 2:
   raise SystemExit
 elif fnmatch.fnmatch(sys.argv[1], "*.xml"): 
   filename = sys.argv[1]
-  tree = ET.parse(codecs.open(filename, encoding = "UTF-8")) # build tree
+  tree = ET.parse(codecs.open(filename, encoding = "UTF-8", errors='replace')) # build tree
   smellingBerries(tree)
 else:
   print "Phrasel Ferret farts in your general direction"
 
-# test structure 
+# Phrasal Ferret needs to find some berries to eat. Will he find anything?
+# He looks through the leaves (elements) to see what he can find
 def smellingBerries(ET):
   root = tree.getroot()
   allChars = root.findall(".//*[@font]")
