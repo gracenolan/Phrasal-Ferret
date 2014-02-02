@@ -15,18 +15,30 @@ def print_all():
   for char in allChars:
     print(char.text)
 
-  #print(etree.tostring(root, pretty_print = True))
-  testing_char = root[0][0][0][0].get("font")
-  print(testing_char)
-  if "OCRB" in testing_char:
-    print("YES this is a OCRB")
+#bold_phrase = ""
+# method to find teh bold characters
+def find_bold(textline):
+  bold_phrase = "" 
+  for text in textline:
+    if not text.tag == "text":
+      continue
+    #print(text.text),
+    if text.get("font"):
+      if "Bold" in text.get("font"):
+        bold_phrase += text.text # this doesn't solve the split line problem
+        print(text.text),
+  
 
-def find_bold():
+# Phrasal Ferret excitedly wiggles it's nose! It scuttles along the branches 
+# in search for tasty text he can analyse. 
+def find_text():
   root = tree.getroot()
-  # are there children? 
+  
+  # are there leaves on this tree?
   if len(root):
-    print("lets climb some branches")
+    print("lets climb some branches!")
     
+    # climb through the first branches
     for child in root:
       print(child.tag)
 
@@ -41,30 +53,10 @@ def find_bold():
           if not textline.tag == "textline":
             continue
           print("    " + textline.tag)
+          
+          find_bold(textline)
 
-          for text in textline:
-            if not text.tag == "text":
-              continue
-            #print(text.text),
-            if text.get("font"):
-              if "Bold" in text.get("font"):
-                print(text.text),
-
-
-      if "textline" in child.tag:
-        font = child[0].get("font")
-        if "Bold" in font:
-          print(font)
-          bold_word.append(child[0].text)
-      else:
-        print("go down a branch")
-  # look for textline tag
-  # does the element contain "bold" ? 
-  # does the next one contain "bold" ?
-  # add them to string 
-  # else go to the next textbox element 
-
-
+  
 # Read in the file name
 if len(sys.argv) != 2:
   print("Usage: FirstFerret.py <xml file> \nPhrasel Ferret likes to climb xml trees. They have the softest leaves and pleasant smelling flowers. Please try again with an xml file >^_^<")
@@ -77,7 +69,7 @@ elif fnmatch.fnmatch(sys.argv[1], "*.xml"):
   except:
     print("OH NO. Phrasal Ferret fell from the branch. (Looks like something went wrong)") 
   print_all()
-  find_bold()
+  find_text()
 else:
   print("Phrasel Ferret farts in your general direction.")
 
