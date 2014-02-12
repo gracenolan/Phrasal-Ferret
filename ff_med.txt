@@ -1,0 +1,807 @@
+ORIGINAL ARTICLES
+
+Force Feedback Plays a Significant Role in Minimally
+
+Invasive Surgery
+Results and Analysis
+
+Gregory Tholey, BS,* Jaydev P. Desai, PhD,*† and Andres E. Castellanos, MD‡
+
+Objective: To evaluate the role of force feedback with applications
+to minimally invasive surgery (MIS). Two research hypotheses were
+tested using our automated laparoscopic grasper.
+Summary Background Data: Conventional laparoscopic tools do
+not have the ability of providing force feedback to a surgeon when
+in use with or without robotic surgical systems. Loss of haptic (force
+and tactile) feedback in MIS procedures is a disadvantage to sur-
+geons since they are conventionally used to palpating tissues to
+diagnose tissues as normal or abnormal. Therefore, the need exists to
+incorporate force feedback into laparoscopic tools.
+Methods: We have developed an automated laparoscopic grasper
+with force feedback capability to help surgeons differentiate tissue
+stiffness through a haptic interface device. We tested our system
+with 20 human subjects (10 surgeons and 10 nonsurgeons) using our
+grasper to evaluate the role of force feedback to characterize tissues
+and answer 2 research hypotheses.
+Results: Our experiments conﬁrmed 1 of our 2 research hypotheses,
+namely, providing both vision and force feedback leads to better
+tissue characterization than only vision feedback or only force
+feedback.
+Conclusions: We have validated 1 of our 2 research hypotheses
+regarding incorporating force feedback with vision feedback to
+characterize tissues of varying stiffness.
+
+(Ann Surg 2005;241: 102–109)
+
+From the †Department of Cardiothoracic Surgery, Drexel University College
+of Medicine, Philadelphia, Pennsylvania; *Program for Robotics, Intel-
+ligent Sensing, and Mechatronics (PRISM) Laboratory, Department of
+Mechanical Engineering and Mechanics, Drexel University, Philadel-
+phia, Pennsylvania; and the ‡Department of Surgery, Drexel University
+College of Medicine, Philadelphia, Pennsylvania.
+
+Address correspondence to: Jaydev P. Desai, PhD, Drexel University, 3141
+Chestnut St., MEM Department, Room 2-115, Philadelphia, PA 19104.
+E-mail: desai@coe.drexel.edu.
+
+Copyright © 2004 by Lippincott Williams & Wilkins
+ISSN: 0003-4932/05/24101-0102
+DOI: 10.1097/01.sla.0000149301.60553.1e
+
+102
+
+Minimally invasive surgical (MIS) procedures using long
+
+instruments have profoundly inﬂuenced modern sur-
+gery by decreasing invasiveness, therefore minimizing pa-
+tient recovery time and cost. However, surgical procedures
+using long tools inserted through small ports on the body
+deprive surgeons of the depth perception, dexterity, sense of
+touch, and straightforward hand-eye coordination that they
+are accustomed to in open procedures. Surgeons have tradi-
+tionally relied on the combination of their tactile and visual
+abilities to diagnose tissue as normal or abnormal.1
+
+The use of laparoscopic tools capable of providing
+force feedback is lacking in current robot-assisted surgical
+systems. Current robotic surgical systems, while providing
+excellent visual feedback, are incapable of providing force
+feedback. Surgeons who operate using these robotic assis-
+tants do not have force and tactile feedback from the opera-
+tive site as they are now indirectly in contact with the surgical
+site instrumented tools. Therefore, the need to incorporate
+force feedback capabilities into MIS procedures, especially
+robotically assisted procedures, provides an excellent oppor-
+tunity to improve the quality of surgical procedures. Improve-
+ments in MIS systems will lead to signiﬁcant societal impacts
+through better patient care, reduced morbidity, shorter hos-
+pital stays, reduced trauma, faster recovery times, and lower
+health care costs.
+
+While research has been done on developing laparo-
+scopic tools capable of providing force feedback, their use in
+surgical practice is limited by the size of these instrumented
+laparoscopic tools and the ease of use in surgical procedures.
+As a result of these shortcomings, our goal was to (a) design
+and develop a modular laparoscopic tool, which would pro-
+vide force feedback for tissue characterization; and (b) using
+the developed laparoscopic grasper, we wanted to evaluate
+the role of force feedback in MIS. In this paper, we will focus
+primarily on the second goal, namely, the evaluation of the
+role of force feedback in MIS. We have developed an inter-
+face to aid the surgeons in characterizing artiﬁcial tissues of
+varying stiffness (prepared using hydrogels), which are a
+reasonable approximation to the tissues encountered by sur-
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Force Feedback and Minimally Invasive Surgery
+
+geons in liver tumor resection. The soft tissues in our experi-
+ments will approximately represent normal liver tissue, medium
+tissues will approximately represent a tumor in the formation
+stage, and hard tissues will approximately represent a fully
+developed tumor. These tissue samples were tested by palpation
+by our surgeon collaborator to make a realistic choice of artiﬁ-
+cial tissue samples in our experimental studies.
+
+Several researchers have already proposed solutions to
+incorporate force feedback into current laparoscopic tools.2– 8
+Many of these solutions involve adding force sensors, such as
+strain gauges, to record forces at the tool tip or developing a
+new robotic manipulator used to operate laparoscopic tools
+and obtain force feedback. Additional work has been done in
+creating new laparoscopic tools with force feedback incorpo-
+rated into their designs.9 –12 However, there still exist many
+problems within the designs of laparoscopic tools and their
+use in robotic surgery.13,14 Schurr et al15 have developed a
+2-arm, master-slave manipulator called ARTEMIS for use by
+surgeons. Dario et al16 have developed a miniature robotic
+surgical system for colonoscopy. Several master-slave ro-
+botic surgical systems have also been commercially devel-
+oped. However, these systems do not provide force feedback
+to the surgeon. Current research within the area of force
+feedback has led to the use of cable-driven mechanisms to
+reduce backlash and play in the mechanism.17–19
+
+MATERIALS AND METHODS
+
+Prototype Development
+
+In this section, we brieﬂy describe the laparoscopic
+grasper that was designed and developed in our laboratory for
+evaluating the role of force and vision feedback in surgery.
+Our design for the laparoscopic grasper with force feedback
+capability was guided by constraints associated with current
+laparoscopic tools. The constraints were a shaft diameter of
+15 mm, a 90-degree angle between the jaws at the maximum
+open position, and accurate positioning of the jaws in relation
+to the handle of the tool. Using these constraints, we devel-
+oped a cable-driven pulley mechanism controlled by a DC
+motor for the actuation of the jaws (see Fig. 1a). The entire
+
+assembly comprised of the laparoscopic grasper and motor
+was mounted on an aluminum plate that could be attached to
+a robot arm for teleoperation (see Fig. 2). Each steel cable,
+connected to a pulley mounted on the motor, traveled through
+the main shaft to a corresponding pulley for each jaw. At each
+jaw pulley,
+the cable wrapped around the pulley in the
+opposite direction compared with the other (one clockwise,
+one counterclockwise). This provided the opposing motion
+for the opening and closing of the jaws and also allowed for
+accurate positioning of the jaws. The initial prototype was
+designed as a grasper and contained 2 serrated jaws to
+facilitate grasping of tissue. A tensioning device for the steel
+cables was also added to allow for easy adjustments in the
+mechanism. The novelty of our design is that it can also
+incorporate tissue-cutting blades (as shown schematically in
+Fig. 1b) instead of the grasper jaws (and they are readily
+interchangeable) due to the quick-change feature in our pro-
+totype. This was achieved by mounting the jaws on the
+outside of the shaft by the use of a screw. This change was
+included as concurrent research in our laboratory consists of
+studying cutting and dissection tasks for reality-based mod-
+eling of tool and tissue interaction forces in MIS.
+Characterization of Tissue Samples
+
+The ﬁrst experiment was to determine the effectiveness
+of our automated grasper to correctly characterize tissues of
+varying hardness through a haptic- and vision-based display
+before proceeding to experimental studies with human sub-
+jects on evaluating the role of force feedback in MIS. We
+tested soft, medium, and hard tissue samples. The soft tissue
+samples approximately represented normal liver tissue, while
+the medium tissue samples approximately represented a tu-
+mor in the formation stage, and the hard samples approxi-
+mately represented a fully developed tumor. Softer samples
+
+FIGURE 1. A), Prototype of the laparoscopic grasper with force
+feedback and B), schematic of the cutting jaws at the laparo-
+scopic tool tip.
+
+FIGURE 2. The laparoscopic grasper attached to the Mitsubishi
+robot arm for tissue manipulation.
+
+© 2004 Lippincott Williams & Wilkins
+
+103
+
+Tholey et al
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+required less force to deform, while harder samples required
+more force for the same deformation. To successfully com-
+plete this experiment, we developed several artiﬁcial tissue
+samples from hydrogel material. The hydrogel was created
+using a combination of polyvinyl alcohol (PVA) and polyvi-
+nyl pyrrolidone (PVP) in the consistency of 99% PVA and
+1% PVP in a 10% concentration. This solution was then cast
+into molds and subjected to several freezing/thawing cycles.
+Six cycles were performed, and after each cycle a sample was
+removed. Sample 1, which was removed ﬁrst, represented the
+softest
+tissue, while sample 6, which was removed last,
+represented the hardest tissue. We performed compression
+tests on the 6 artiﬁcial tissue samples on an Instron machine
+to verify that there was a marked difference in the tissue
+stiffness prior to using the tissue samples in our research
+hypothesis testing. We experimentally observed a signiﬁcant
+difference in the tissue hardness for all the 6 samples.
+
+We chose 3 different tissue samples for the tissue
+characterization experiment and used the automated laparo-
+scopic grasper developed in our laboratory for this experi-
+ment. The samples were grasped in the laparoscopic tool, and
+measurements of the grasping force and angular displacement
+of the jaws were recorded. The grasping force was calculated
+by the amount of current applied to the motor. Figure 3 shows
+a plot of the grasping force as felt by the user while grasping
+tissues of varying hardness. As seen from the ﬁgure, for the
+same jaw displacement, tissue sample 6 had a higher grasping
+force than samples 3 and 1. This conﬁrmed that the auto-
+mated grasper was capable of providing force feedback,
+which varied with the tissue hardness.
+
+FIGURE 3. Tissue characterization graph for the three artificial
+tissue samples showing force vs. angular position of the jaw.
+
+104
+
+Experimental Setup and Research Protocol for
+Tissue Characterization
+
+We were interested in evaluating the role of force
+feedback in tissue characterization. For this we used only
+vision feedback, only force feedback, a combination of vision
+and force feedback, and direct exploration with the tissue
+samples. To prevent any learning, we gave the subjects
+adequate time to practice with the system before the experi-
+mentation began (details in Results section).
+
+Vision (V) Feedback Protocol
+
+For the ﬁrst part of the experiment, the subject was
+presented with 3 random tissue samples of varying consis-
+tency to be grasped with the prototype. The ﬁrst test consisted
+of using only vision feedback from the remote site to rank the
+samples from softest to hardest. The subject was able to view
+the grasping of the samples through a video screen to view
+the deformation of the sample. For this experiment, we used
+a standard CCD video camera that was approximately 1 foot
+in the horizontal position and approximately 6 inches in the
+vertical, from the sample, therefore giving an isometric view of
+the grasper jaws and the tissue sample. The jaws closed on the
+tissue to a desired angle to show the subject the deformation of
+the tissue. One sample at a time was grasped, and the subject
+could view the grasping on a video screen. Once the 3 samples
+(soft, medium, and hard) had been presented, the subject was
+asked to rank them from softest to hardest based on their
+observations. It should be noted that during each trial, the subject
+could request a replay of 1 or more of the samples before
+ranking the samples, therefore reducing error due to random
+guessing or forgetting which sample was soft, medium, and
+hard. The subject then ranked the 3 samples, and the process was
+repeated for a total of 5 trials. Each trial was repeated with the
+same samples randomly arrayed to prevent any memorization of
+the samples.
+
+Force (F) Feedback Protocol
+
+The second test consisted of the same method with the
+exception of using force feedback instead of vision feedback
+to characterize the tissue. For this experiment, the subject
+interacted with the PHANToM (haptic interface device man-
+ufactured by Sensable Technologies, Woburn, MA) by in-
+serting their ﬁnger in a thimble attached to the arm of the
+PHANToM (see Fig. 3). The direction of the force feedback
+within the PHANToM was vertical and acting upwards.
+Therefore, the subject was required to hold the edge of the
+desk with their thumb under the desk and other 3 ﬁngers
+resting on top of the desk. Through the keyboard, an operator
+opened and closed the jaws while the subject received force
+feedback from each sample. This setup was representative of
+palpation (using the thumb and foreﬁnger) done by surgeons
+(although virtual) where arm dynamics do not affect the
+
+© 2004 Lippincott Williams & Wilkins
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Force Feedback and Minimally Invasive Surgery
+
+results. The grasper was set to close the jaws to the same
+angle for each sample to keep the deformation constant.
+Therefore, the only variable that existed was the amount of
+force required for the deformation, and this force was based
+on the tissue’s stiffness. After the closure of the jaws to the
+prespeciﬁed angle (same as in the vision feedback experi-
+ment), the subject could manipulate the PHANToM with
+their index ﬁnger to characterize the amount of grasping force
+for that particular sample. This process was repeated for the
+3 tissue samples in the trial, and the subject was given the
+option to feel any or all of the samples again. The subject then
+ranked the 3 samples in order from softest to hardest. This
+process was also repeated for a total of 5 trials.
+
+Vision and Force (V ⴙ F) Feedback Protocol
+
+The third test consisted of using both force feedback
+and vision feedback to differentiate between the 3 tissue sam-
+ples. This test was performed in the same way as the force test
+with the exception of having video feedback of the grasping.
+The subject was able to view the deformation of the tissue while
+also receiving force feedback from the PHANToM. Again, the
+subject was presented with the 3 samples and was asked to rank
+them from softest to hardest. An opportunity for a replay of any
+or all samples was given during each trial. A total of 5 trials were
+performed for this part.
+
+Direct Exploration (DE) Protocol
+
+The ﬁnal test of this experiment was to ask the subject
+to rank the 3 tissue samples from softest to hardest based on
+direct exploration of the samples with their ﬁngers. Only 1
+trial was required for this protocol.
+
+Data Collection and Analysis
+
+The experiment was performed by a total of 20 subjects
+for a total of 900 trials (5 trials each for V, F, V ⫹ F, and 3
+tissue samples to be characterized; hence 45 trials by each
+subject). Ten subjects were surgeons who had experience in
+MIS, and the other 10 were nonsurgeons who had no surgical
+or medical background. The data were collected in a quali-
+tative fashion with responses characterized as either “true” or
+“false” and denoted by a value of 1 or 0, respectively. For a
+particular trial of all 3-tissue samples to be characterized as
+true, the subject was required to identify all 3-tissue samples
+in their correct order of stiffness. The data were then analyzed
+using a single-factor analysis of variance (ANOVA) method.
+ANOVA generates a P value (probability) for the null hy-
+pothesis (H0) and thus a probability for the research hypoth-
+esis (H1) to be tested. The lower the P value, the smaller the
+probability for the null hypothesis to be true and consequently
+higher is the probability that there is a signiﬁcant statistical
+difference between the data sets (or the research hypothesis
+H1 is true). The level of signiﬁcance (␣ value) for our
+statistical analysis was chosen to be 0.05, meaning that a
+
+© 2004 Lippincott Williams & Wilkins
+
+hypothesis would be considered true if P ⬍ ␣. In addition,
+Tukey’s method was used as the post hoc ANOVA test.
+Tukey’s method is used to test all pairwise mean comparisons
+after an ANOVA is performed on the data set. The ANOVA
+analysis can only be used if the dependent variance is the
+same in each population, which was not the case in our
+experimental observations. Therefore, Tukey’s method must
+be used for accurate determination of statistical signiﬁcance.
+This method will declare that 2 means are signiﬁcantly
+different if the absolute value of the difference of the means
+exceeds:
+
+T␣ ⫽ q␣共a,f 兲冑MSE
+
+n
+
+where ␣ ⫽ level of signiﬁcance (0.05), a ⫽ number of popula-
+tions, f ⫽ number of samples taken ⫺ number of populations,
+MSE ⫽ mean square error, and n ⫽ number of samples per
+population. The resulting value (T␣) represents the number at
+which the level of signiﬁcance is ␣.
+
+RESULTS
+
+Research Hypotheses
+
+We performed the above experiments to test the valid-
+ity of 2 research hypotheses that have direct clinical rele-
+vance. These are:
+
+1. Providing only force feedback leads to better tissue
+characterization for all 3 tissue samples compared with using
+only vision feedback for all 3 tissue samples (Fa ⬎ Va).
+
+2. Providing vision and force feedback simultaneously
+for all 3 tissue samples is better than only vision feedback or
+only force feedback for all 3 tissue samples ((V ⫹ F)a ⬎ Va,
+(V ⫹ F)a ⬎ Fa).
+
+The “⬎” sign denotes “is better than” in the above
+hypotheses. Subscripts “s,” “h,” and “a” refer to soft tissue,
+hard tissue, and all tissue samples, respectively.
+
+Evaluating the Role of Force-Feedback in
+Tissue Characterization
+
+The effect of learning in the experiment was closely
+examined to prevent any tainting of the data. As explained
+above, the tissue samples were randomly presented in each
+trial, and subjects were also given an opportunity for a replay
+to eliminate any random guesses. Subjects were also given
+sufﬁcient time to experiment with a sample tissue (not used in
+the actual experiment) to become acquainted with the setup
+and the PHANToM. Each subject spent at least 10 minutes
+practicing until they felt comfortable to begin the experiment.
+The order of the experiments (vision feedback alone, force
+feedback alone, simultaneous vision and force feedback, and
+direct exploration) was limited by the type of feedback and
+therefore could not be randomized. Vision feedback alone
+
+105
+
+Tholey et al
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+FIGURE 4. A) Percentage of successful tissue characterizations for all five trials using only vision feedback, B) Percentage of
+successful tissue characterizations for all five trials using only force feedback, C) Percentage of successful tissue characterizations
+for all five trials using vision and force feedback.
+
+and force feedback alone must be tested before simultaneous
+vision ⫹ force feedback and direct exploration because of the
+presence of more than 1 sensory clue. If the above approach
+is not followed, the subjects may link a force felt by a
+particular sample to the visual cues from that sample and this
+may contribute to a learning effect. The trials were thus
+presented in the following order: vision feedback alone, force
+feedback alone, simultaneous vision ⫹ force feedback, and
+direct exploration.
+
+To verify that there was indeed no learning effect in our
+experiments, we examined the data after the experiments
+were completed with all the subjects. As shown in Figure 4,
+for each type of feedback (ie, vision feedback alone, force
+feedback alone, and simultaneous vision ⫹ force feedback),
+there was no steady increase in the percentage correct re-
+sponse as the trials progressed. It can thus be concluded that
+the subjects did not exhibit a learning effect as the trials
+progressed. The individual results for each subject testing the
+3 tissue samples in each of the 4 methods, namely, V, F, V ⫹
+F, and DE, are shown is Figure 5 based on the protocol
+outlined in Experimental Setup and Research Protocol for
+Tissue Characterization. Overall,
+the average correct re-
+sponse using only vision feedback was 52%, while the aver-
+age correct using only force feedback was 67%. Providing
+both vision feedback and force feedback produced an average
+of 83% and direct exploration produced an average of 100%
+correct. Excluding direct exploration, our results conﬁrm that
+on the average, subjects are more comfortable characterizing
+tissues when both vision and force feedback were provided
+(ratio of the average correct response to the corresponding
+standard deviation was the highest with V ⫹ F compared with
+only V or only F). An ANOVA analysis was performed to
+evaluate whether there was a signiﬁcant difference between
+the 3 data sets (V, F, V ⫹ F). The P value obtained when
+comparing all 3 data sets was 0.00001325, leading to a
+probability of greater than 99.99% that there was a signiﬁcant
+statistical difference between the data sets. However, further
+analysis is needed to determine which data sets are signiﬁ-
+
+106
+
+cantly different, which will be addressed in each of the
+hypotheses below.
+
+Hypothesis 1
+
+Providing only force feedback leads to better tissue
+characterization for all 3 samples compared with using only
+vision feedback for all 3 samples (Fa ⬎ Va).
+
+In our ﬁrst hypothesis,
+
+the subjects were asked to
+characterize all 3 tissue samples correctly in any given trial.
+As shown in Figure 6(a), providing vision feedback alone
+resulted in differentiating the tissue samples correctly in 50%
+of the trials for all subjects, while using only force feedback
+resulted in 67% of the trials being correct. Tukey’s method
+was applied to the vision feedback and force feedback data
+sets using a level of signiﬁcance of 0.05. The value of T0.05
+
+FIGURE 5. Percentage of successful tissue characterizations for
+each individual using each of the four methods. The histogram
+for each subject is always presented in the order V, F, V ⫹ F,
+and DE as shown in the figure for subject 1.
+
+© 2004 Lippincott Williams & Wilkins
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Force Feedback and Minimally Invasive Surgery
+
+FIGURE 6. A) Percentage of successful tissue characterizations by all subjects for all three tissue samples using only vision and only
+force feedback, B) Percentage of successful tissue characterizations by surgeons using only vision and only force feedback, C)
+Percentage of successful tissue characterizations by non-surgeons using only vision and only force feedback.
+
+was calculated to be 0.1525, and the difference between the
+means of the data sets was 0.15. Therefore, since the differ-
+ence of the means was less than the value of T0.05 (although
+marginal), we cannot say with conﬁdence that there is a
+statistical difference between only vision feedback and only
+force feedback. However, the values are very close, and
+signiﬁcance of the null hypothesis was calculated to be 0.052,
+which is just above the level of signiﬁcance (␣ ⫽ 0.05).
+
+Individually, surgeons were correct in 62% and 72% of
+the trials for only vision feedback and only force feedback,
+respectively, while nonsurgeons were correct in 42% of the
+trials using only vision feedback and 62% of the trials using
+only force feedback (see Figs. 6b and c) for identifying all 3
+tissue samples correctly. We analyzed the statistical differ-
+ence between Va and Fa for the surgeons’ data set and the
+nonsurgeons’ data set. Using Tukey’s method, the calculated
+value of T0.05 was 0.2095 and 0.2194 for surgeons and
+nonsurgeons, respectively. The difference in the means for
+vision feedback and force feedback for surgeons and nonsur-
+geons was 0.10 and 0.20, respectively. As shown, both of
+these values are less than the calculated T0.05, and the sig-
+niﬁcances calculated for these were 0.495 and 0.081 for
+surgeons and nonsurgeons, respectively. Therefore, we can-
+
+not conclude that surgeons will perform better tissue charac-
+terizations with only force feedback than with only vision
+feedback. However, there is a signiﬁcant difference between
+the surgeons and nonsurgeons using the 2 methods. This is
+because Tukey’s method is a measure of the difference
+between the 2 data sets (vision feedback and force feedback).
+The surgeons had a smaller difference (10%) than the non-
+surgeons (20%) because of their experience using vision to
+characterize tissues in laparoscopic procedures, which leads
+to a higher signiﬁcance of the null hypothesis (0.495) for
+surgeons compared with nonsurgeons (0.081). However, sur-
+geons’ overall percent correct was higher than that of non-
+surgeons.
+
+Hypothesis 2
+
+Providing vision and force feedback simultaneously for
+all 3 samples is better than only vision feedback or only force
+feedback for all 3 samples ((V ⫹ F)a ⬎ Va, (V ⫹ F)a ⬎ Fa).
+Our second hypothesis stated that (V ⫹ F)a was better
+than Va or Fa for tissue characterization. As shown in Figure
+7(a), the percent correct for vision feedback, force feedback,
+and simultaneous vision and force feedback was 52%, 67%,
+and 83%, respectively, for identifying all 3 tissue samples
+
+FIGURE 7. A) Percentage of successful tissue characterizations by all subjects for all three tissue samples using both vision and force
+feedback, B) Percentage of successful tissue characterizations for surgeons using both vision and force feedback, C) Percentage
+of successful tissue characterizations for non-surgeons using both vision and force feedback.
+
+© 2004 Lippincott Williams & Wilkins
+
+107
+
+Tholey et al
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Individually,
+
+correctly in any given trial. For direct exploration method, the
+subjects characterized the 3 tissue samples correctly 100% of
+the time. Tukey’s method was used to analyze the entire data
+set comparing (V ⫹ F)a to Va and (V ⫹ F)a to Fa. As shown
+in the ﬁrst hypothesis, T0.05 was calculated to be 0.1525 for
+all subjects. The difference of the means between (V ⫹ F)a to
+Va was 0.31 and the difference between (V ⫹ F)a to Fa was
+0.16. Since both of these differences are higher than T0.05,
+there is a signiﬁcant statistical difference between the data
+sets compared. Also, the corresponding signiﬁcance of H0 for
+comparing (V ⫹ F)a to Va was less than 0.001 and for
+comparing (V ⫹ F)a to Fa was 0.035, leading to conﬁdence
+levels of 99.99% and 96.5%, respectively, for the research
+hypothesis H1 to be true. Therefore, there is a signiﬁcant
+statistical difference between (V ⫹ F)a and either Va or Fa.
+the surgeons’ performance was 62%,
+72%, and 84% for Va, Fa, and (V ⫹ F)a, respectively, and
+nonsurgeons’ performance was 42%, 62%, and 82% for Va,
+Fa, and (V ⫹ F)a, respectively (see Figs. 7b and c) for
+identifying all 3 tissue samples. Tukey’s method was used for
+the data set containing only surgeons and the data set con-
+taining only nonsurgeons. As shown in hypothesis 1, the
+value of T0.05 for surgeons and nonsurgeons was 0.2095 and
+0.2194, respectively. The difference of the means for the
+surgeons’ data sets was 0.22 for (V ⫹ F)a versus Va, and for
+the nonsurgeons’ data sets, the difference of the means was
+0.40 for (V ⫹ F)a versus Va. For surgeons, the difference of
+the means for (V ⫹ F)a versus Va (0.22) is greater than T0.05
+(0.2095); therefore, we can conclude that providing simulta-
+neous vision and force feedback to the surgeon is better than
+just vision feedback. For nonsurgeons, the difference of the
+means for (V ⫹ F)a versus Va (0.40) is greater than T0.05
+(0.2194). Therefore for nonsurgeons also, providing simulta-
+neous vision and force feedback is better than just vision
+feedback. Individually, the calculated signiﬁcances of the null
+hypothesis for (V ⫹ F)a versus Va was 0.036 for surgeons and
+less than 0.001 for nonsurgeons. Hence, we can conclude on
+an individual basis also that surgeons and nonsurgeons per-
+formed better with simultaneous vision and force feedback
+than only vision feedback. Thus, our claim that current MIS
+procedures can greatly beneﬁt from the addition of force
+feedback to vision feedback is validated.
+
+DISCUSSION
+
+We have developed the initial prototype of our auto-
+mated laparoscopic grasper with force feedback capability
+along with an information-enhanced display to provide vision
+and force feedback to the user while manipulating tissues.
+This tool incorporates a quick-change feature for easy con-
+version between grasper, cutter, and dissector, as well as
+accurate positioning of the jaws. These improvements over
+conventional tools have made it easier for us to use it with
+robotic systems while still retaining advantages of conven-
+
+108
+
+tional laparoscopic surgery. The experimental work has dem-
+onstrated these advantages by showing that an operator can
+easily differentiate between tissue samples of varying stiff-
+ness. Our results conﬁrm that subjects are more comfortable
+and more accurate at characterizing tissues with simultaneous
+vision and force feedback compared with vision feedback
+alone or force feedback alone. Overall, considering all 20
+subjects, while hypothesis 1 (Fa ⬎ Va) was not proven
+correct, hypothesis 2 ((V ⫹ F)a ⬎ Va, (V ⫹ F)a ⬎ Fa) was
+validated through our experimental results. Though hypoth-
+esis 1 (Fa ⬎ Va) was not validated, the signiﬁcance (0.052)
+was very close to the 95% cutoff limit. The statistical analysis
+has also shown that nonsurgeons performed signiﬁcantly
+better with simultaneous vision and force feedback interface
+than with vision feedback alone or force feedback alone. This
+demonstrated that an inexperienced person could easily char-
+acterize different tissue samples if they are provided with
+both vision and force feedback. The performance of the
+nonsurgeons can be attributed to the high difference in the
+percentage correct between the various types of feedback,
+which causes a lower P value, as this is a measurement of the
+difference between data sets. The surgeons had higher P
+values since their difference in the percentage correct was
+much lower than nonsurgeons because of their training and
+experience in characterizing tissues using only vision feed-
+back in conventional laparoscopic surgery. The results of this
+study will lead to a better understanding of the design of
+automated laparoscopic tools that can provide force feedback
+in surgical procedures, simulation, and training.
+
+Although we have successfully proved that force feed-
+back plays a signiﬁcant role in MIS, there were limitations in
+our experiments as compared with a surgical setting. First, we
+have only done studies on grasping, rather than palpation.
+This was primarily due to the limitation of the hardware.
+Future prototypes will be designed to overcome this limita-
+tion. Second, the visual ﬁeld in our setup was restricted by a
+stationary camera as opposed to a movable endoscope that
+would be used in a laparoscopic procedure. The vision feed-
+back part of the experiment also restricts the feedback to pure
+vision, while in conventional laparoscopic procedures the
+surgeon has some force feedback through the surgical tool
+(primarily through the reaction force of the tool contacting an
+organ or tissue). However, this force feedback, though lim-
+ited in laparoscopic procedures, is completely lost in roboti-
+cally assisted laparoscopic procedures. While an experienced
+surgeon trains their perceptual faculties to infer the interac-
+tion of the laparoscopic tool with the tissue through primarily
+vision feedback (from our experiments, some surgeons had
+all correct responses with vision feedback alone), it is rea-
+sonable to assume (based on our experimental data) that over
+time,
+the perceptual ability to combine vision and force
+information received from automated tools is possible. Third,
+another simpliﬁcation we have made in our studies, compared
+
+© 2004 Lippincott Williams & Wilkins
+
+Annals of Surgery • Volume 241, Number 1, January 2005
+
+Force Feedback and Minimally Invasive Surgery
+
+with an actual clinical setting, is that the subject could only
+fully open or fully close the automated grasper, whereas a
+surgeon has more control in a surgical setting to allow for
+palpation of the tissue by controlling the “angle of closing” of
+the grasper jaws.
+
+In addition to the experimental setup limitations, there
+are several issues with the apparatus that we need to address
+in future research. Future versions of our laparoscopic tool
+must be scaled down further to incorporate this tool in all
+commonly used laparoscopic procedures. This can be accom-
+plished through small changes in the design, which will allow
+for a smaller shaft and jaws. Currently, we use motor current
+to estimate the grasping force at the jaws. In future versions,
+we envision using small piezoelectric sensors placed on the
+jaws to record the actual forces exerted on the tissue. This
+would allow for a very accurate characterization of the tissue
+sample via a haptic interface device than using the current-
+based indirect estimation method as in the present prototype.
+In conclusion, the experimental results and the analysis pre-
+sented in this work validates our claim that force feedback
+added to vision feedback leads to an improvement in tissue
+characterization than using only vision feedback for MIS.
+
+ACKNOWLEDGMENTS
+
+We would like to acknowledge the support of National
+Science Foundation grants EIA-0079830, EIA-0312709, and
+CAREER Award IIS-0133471 for this work.
+
+REFERENCES
+
+1. Chen HS, Sheen-Chenn SM. Synchronous and early metachronous
+colorectal adenocarcinoma: analysis of prognosis and current trends. Dis
+Colon Rectum. 2000;43:1093–1099.
+
+2. Krupa A, Morel G, de Mathelin M. Achieving high precision laparo-
+scopic manipulation through adaptive force control. IEEE International
+Conference on Robotics and Automation, 2002:1864 –1869.
+
+3. Taylor RH, Funda J, Eldridge B, et al. A telerobotic assistant for
+
+laparoscopic surgery. IEEE Eng Med Biol. 1995;14:279 –286.
+
+4. Munoz VF, Vara-Thorbeck C, DeGabriel JG, et al. A medical robotic
+assistant for minimally invasive surgery. IEEE International Conference
+on Robotics and Automation, Vol. 3. 2000:2901–2906.
+
+5. Bicchi A, Canepa G, DeRossi D, et al. A sensor-based minimally
+invasive surgery tool for detecting tissue elastic properties. IEEE Inter-
+
+national Conference on Robotics and Automation, Vol. 1. 1996:884 –
+888.
+
+6. Scilingo E, DeRossi D, Bicchi A, et al. Sensor and devices to enhance
+the performance of a minimally invasive surgery tool for replicating
+surgeon’s haptic perception of the manipulated tissues. IEEE Interna-
+tional Conference on Engineering in Medicine and Biology, Vol. 3.
+1997:961–964.
+
+7. Madhani AJ, Niemeyer G, Salisbury JK. The black falcon: A teleoper-
+ated surgical instrument for minimally invasive surgery. IEEE Interna-
+tional Conference on Intelligent Robots and Systems, Vol. 2, 1998. pp.
+936 –944.
+
+8. Hu T, Castellanos AE, Tholey G, et al. Real-time haptic feedback in
+laparoscopic tool for use in gastro-intestinal surgery. Fifth International
+Conference on Medical Image Computing and Computer Assisted In-
+tervention (MICCAI), 2002.
+
+9. Dingshoft VVH tot, Lazeroms M, van der Ham A, et al. Force reﬂection
+for a laparoscopic forceps. 18th Annual International Conference of the
+IEEE Engineering in Medicine and Biology Society, Vol. 1. 1996:210 –
+211.
+
+10. Rosen J, Hannaford B, MacFarlane MP, et al. Force controlled and
+teleoperated endoscopic grasper for minimally invasive surgery: exper-
+imental performance evaluation. IEEE Trans Biomed Eng. 1999;46:
+1212–1221.
+
+11. Salle D, Gosselin F, Bidaud P, et al. Analysis of haptic feedback
+performances in telesurgery robotic systems. IEEE International work-
+shop on Robot and Human Interactive Communication, 2001:618 – 623.
+12. Tholey G, Chanthasopeephan T, Hu T, et al. Measuring grasping and
+cutting forces for reality-based haptic modeling. International Confer-
+ence on Computer Assisted Radiology and Surgery, 2003;794 – 800.
+
+13. Dario P, Bergamasco M. An advanced robot system for automated
+diagnostic task through palpation. IEEE Trans Biomed Eng. 1998;35:
+118 –126.
+
+14. Menciassi A, Eisinberg A, Scalari G, et al. Force feedback-based
+microinstruments for measuring tissue properties and pulse in microsur-
+gery. IEEE International Conference on Robotics and Automation, Vol.
+1. 2001:626 – 631.
+
+15. Schurr MO, Buess GF, Neisius B, et al. Robotics and telemanipulation
+technologies for endoscopic surgery: a review of the ARTEMIS project:
+Advanced Robotic Telemanipulator for Minimally Invasive Surgery.
+Surg Endosc. 2000;14:375–381.
+
+16. Dario P, Corrozza MC, Peitrabissa A. Development and in vitro testing
+of a miniature robotic system for computer-assisted colonoscopy. Com-
+put Aided Surg. 1999;4:1–14.
+
+17. Ohashi T, Szemes P, Korondi P, et al. Nonlinear disturbance compen-
+sation for haptic device. IEEE International Symposium on Industrial
+Electronics, Vol. 1. 1999:304 –309.
+
+18. Walairacht S, Koike Y, Sato M. String-based haptic interface device for
+
+multi-ﬁngers. IEEE Virtual Reality Proceedings, 2000:293.
+
+19. Takahashi Y, Tomatani Y, Matsui Y, et al. Wire driven robot hand. IEEE
+International Conference on Industrial Electronics, Control and Instru-
+mentation, Vol. 3. 1997:1293–1298.
+
+© 2004 Lippincott Williams & Wilkins
+
+109
+
+

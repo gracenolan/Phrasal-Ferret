@@ -21,27 +21,27 @@ def extract_xml():
       doc += char.text
     except:
       continue
-    print(doc)
- #find_repeats() # this calls the function that raises the error
+    #print(doc)
+  find_repeats() # this calls the function that raises the error
 
 # find repeats of phrases in the document. 
 # Note: only accepts plain text, not xml
 def find_repeats():
   global doc
   global phrases
-  for phrase in phrases.items():
-    appearances = doc.count(phrase) # this is the broken line of code
+  for key, value in phrases.items():
+    appearances = doc.count(key) # this is the broken line of code
     #if phrase in doc:
-    phrases[phrase] += appearances
+    phrases[key] += appearances
 
 
 # globals to hold continuity of phrases
 font = ""
-bold_phrase = ""
-# Phrasal Ferret thinks bold phrases are damn tasty
-# this function finds all of the bold phrases
-def find_bold(textline):
-  global bold_phrase
+italic_phrase = ""
+# Phrasal Ferret thinks italic phrases are damn tasty
+# this function finds all of the italic phrases
+def find_italic(textline):
+  global italic_phrase
   global font
 
   for text in textline:
@@ -51,19 +51,19 @@ def find_bold(textline):
     # Is this char part of the current phrase?
     if text.get("font"):
       if font == text.get("font"):
-        bold_phrase += text.text 
+        italic_phrase += text.text 
 
       # is this the start of a a new phrase?
-      elif "Bold" in text.get("font"):
+      elif "Italic" in text.get("font"):
         # save the last phrase before starting a new one
-        if len(bold_phrase) > 2: 
-          if not bold_phrase in phrases:
-            phrases[bold_phrase] = 1
+        if len(italic_phrase) > 2: 
+          if not italic_phrase in phrases:
+            phrases[italic_phrase] = 1
           else:
-            phrases[bold_phrase] += 1
+            phrases[italic_phrase] += 1
 
        # clear old phrase and save the new one
-        bold_phrase = text.text
+        italic_phrase = text.text
         font = text.get("font")
 
       else:
@@ -91,7 +91,7 @@ def find_text():
           if not textline.tag == "textline":
             continue
 
-          find_bold(textline)
+          find_italic(textline)
 
 
 # ---- This is where the first block of the program where the file is read ---- #
@@ -122,9 +122,9 @@ except:
   extract_xml()
 
 # What did Phrasal Ferret find? Here are the results 
-print(str(len(phrases)) +  " bold phrases found")
+print(str(len(phrases)) +  " italic phrases found")
 key = max(phrases, key=phrases.get)
-print("The most common Bold phrase is:")
+print("The most common italic phrase is:")
 print(key, phrases[key])
 
 
