@@ -8,14 +8,32 @@ import fnmatch
 # This is Phrasal Ferret's collection of phrases 
 # dictionary of phrases with a count of how often they appear 
 phrases = {}
-
+filename = ""
+doc = "" 
 # Phrasal Ferret wants some new phrases! Will he find anything?
 # He looks through the leaves (elements) to see what he can find
-def print_all():
+def extract_xml():
+  global doc
   root = tree.getroot()
   allChars = root.findall(".//*[@font]")
   for char in allChars:
-    print(char.text)
+    try:
+      doc += char.text
+    except:
+      continue
+    print(doc)
+ #find_repeats()
+
+# find repeats of phrases in the document. 
+# Note: only accepts plain text, not xml
+def find_repeats():
+  global doc
+  global phrases
+  for phrase in phrases.items():
+    doc.count(phrase)
+    #if phrase in doc:
+    phrases[phrase] += appearances
+
 
 # globals to hold continuity of phrases
 font = ""
@@ -55,11 +73,11 @@ def find_bold(textline):
 # It scuttles along the branches in search for tasty text he can analyse. 
 def find_text():
   root = tree.getroot()
-  
+
   # are there leaves on this tree?
   if len(root):
     print("lets climb some branches!")
-    
+
     # climb through the first branches
     for child in root:
 
@@ -75,25 +93,42 @@ def find_text():
 
           find_bold(textline)
 
-# Read in the file name
+
+# ---- This is where the first block of the program where the file is read ---- #
+
 if len(sys.argv) != 2:
   print("Usage: FirstFerret.py <xml file> \nPhrasel Ferret likes to climb xml trees. They have the softest leaves and pleasant smelling flowers. Please try again with an xml file >^_^<")
   raise SystemExit
+
 elif fnmatch.fnmatch(sys.argv[1], "*.xml"): 
   filename = sys.argv[1]
   try:
     parser = etree.XMLParser(recover=True)
-    tree = etree.parse(codecs.open(filename, encoding = "UTF-8", errors='replace'), parser=parser) # build tree. This is where the error is occuring!
+    tree = etree.parse(codecs.open(filename, encoding = "UTF-8", errors='replace'), parser=parser)
   except:
-    print("OH NO. Phrasal Ferret fell from the branch. (Looks like something went wrong)") 
+    print("OH NO. Phrasal Ferret fell from the branch. (Looks like something went wrong)")
+    raise SystemExit
+
   find_text()
 else:
   print("Phrasel Ferret farts in your general direction.")
 
+# grab the plain txt version of the file for easier reinforcement scanning
+filename.replace(".xml", ".txt")
+try:
+  doc = open(filename, encoding= "UTF-8")
+except:
+  print("it would have been nice if you extracted that doc as a .txt file too. Makes it easier for scanning ^_^")
+  extract_xml()
+
+# What did Phrasal Ferret find? Here are the results 
 print(str(len(phrases)) +  " bold phrases found")
 key = max(phrases, key=phrases.get)
 print("The most common Bold phrase is:")
 print(key, phrases[key])
+
+
+
 print("done")
 raise SystemExit
 

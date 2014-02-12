@@ -1,0 +1,401 @@
+Application Delivery Strategies
+
+,=JA$.A>HK=HO 
+
+.EA'"'
+)KJDH,KC=AO
+
+!,,=J===CAAJ+JHEC,=J=8KA8A?EJO=@8=HEAJO+KHHAJ>KIEAII?@EJEI=@
+
+A@EKI =HA FKIDEC JH=@EJE= @=J= ==CAAJ FHE?EFAI J JDAEH EEJI CELEC HEIA J LA HA
+BH=EA@=FFH=?DAI
+
+META Trend: During 2001/02, leading enterprises will increasingly use a centralized data warehouse to define
+a common business vocabulary that improves internal and external collaboration. Through 2003/04, data
+quality and integration woes will be tempered by data profiling technologies (for generating metadata,
+consolidated schemas, and integration logic) and information logistics agents. By 2005/06, data, document,
+and knowledge management will coalesce, driven by schema-agnostic indexing strategies and portal maturity.
+
+6DA ABBA?J B JDA A?AH?A IKHCA = HEIA E
+AHCAH=?GKEIEJE=?JELEJOE?HA=IA@?=>H=JE=@
+
+JE===OJE?==@?=>H=JELA?IEIJA?EAI?D=C
+EC A?E? ?@EJEI D=LA =@A JDEI > HA
+
+JDA @HELA BH D=HAIIEC EBH=JE =I = ?FAJEJELA
+?=J=OIJ EI @HELEC AJAHFHEIAI J DECDAH ALAI B ?
+
+@EBBE?KJ-?AH?AEF=HJE?K=HD=IANF@A@@=J=
+==CAAJ?D=ACAI=CJDHAA@EAIEIL
+
+I?EKIAII=>KJDM@=J=EI==CA@=JEJIIJ>=IE?
+ALA1  DEIJHE?=EJACH=JA@@=J=>=IAIAC
+
+KAI LA?EJO =@ L=HEAJO 1    16
+HC=E=JEI KIJ ?FEA L=HEKI =FFH=?DAI J
+
+@=J= M=HADKIAI FAH=JE= @=J= IJHAI @=J= =HJI
+ME >A ALAH=CA@ J O BH EJA@A@ ==OJE?=
+
+D=LA=JJDAEH@EIFI=BH@A=ECMEJDA=?D
+
+FKHFIAI >KJ E?HA=IECO BH EJH=AJAHFHEIA
+?IEIJA?O?H@E=JE *O  !" JDAIA IJHK?
+
+,=J= 8KA -?AH?A ?D=AI E?HA=IA JDA
+@AFJD>HA=@JDB@=J==L=E=>A=>KJ=JH=I=?JEH
+
+JKHAIE?K@ECJDAEH=II?E=JA@AJ=@=J=ME>A
+F=H MEJD =FFE?=JE FHJBEI HC=E=JE ?D=HJI
+
+=OFEJBEJAH=?JE6DAMAH?IJBA?D=AI
+A=>AI=AJAHFHEIAJBBAHEJIC@IHIAHLE?AIJHA
+
+=@FH?A@KHA=K=IBH@ABEEC=>KIEAIIJEJI
+AFOAAI=@=BBEE=JAI,=J=HA?H@I@=J=IJHK?JKHAI
+
+E@ELE@K=IHJH=@ECF=HJAHI=@KFJNJDAGK=JEJO
+B@=J==>KJ=E@ELE@K=JH=I=?JE=O>A?A?JA@a
+
+=@@ABEEJEI?O=??AFJA@JDHKCDKJ=A
+JAHFHEIAHA@K?ABEAB@IFKEC=C=EIJA=?DJDAH@KA
+
+JDAHA>OE?HA=IECJDALAH=LKAB@=J=J>A=
+=CA@.KHJDAHHA=IAJAHFHEIAI?AJIAAEBH=JE
+
+J @EBBAHA?AI E JDA M=O A=?D FAH?AELAI MDAHA JDA
+AJAHFHEIAD=I>AAEIFHAIAJO=@EIDA=@A@4A=@EO
+
+=I = J=CE>A =IIAJ JDAO >A?A HAK?J=J J @EI?=H@ EJ
+6OFE?=OE?HA=IAIE@=J=LKA=HAD=@A@>OFKH
+
+=??AIIE>A ?KHHAJDEIJHE?= HA?H@I B JH=I=?JEI
+=BBEE=JAIF=HJAHIAFOAAI?KIJAHIIKFFEAHI
+
+?D=IEC=@@EJE=EAIJH=CA0MALAH=I@=J=LKA
+E?HA=IAIJDAHA=JELAL=KABA=?D@=J=FEJ@A?HA=IAI
+
+=@>KIEAIIFH?AIIAIHHKAI=CMEJD@ABEE
+JE==@=LEC=JE=AJ=@=J=IAA),5,AJ=&'$
+
+FHFHJE=JAOaHAIKJECE=FHBE=?E=KIJEBE?=
+JE BH AHAO E?HAAJEC EA IJH=CA 8E=>A
+
+%)KC A=>AAFOAAIJF=@@AEJDAI=A
+@EHA?JE+LAHIAO=FFE?=JEIFA?EBE?@=J=IJHAI
+
+=JAH=JAIIKFFAAJIJD=CECAM@EIE?K@A
+_
+
+1FAAJEC JEAHA@ IJH=CA IOIJAI IAA 515 ,AJ=
+
+AC=??KJIHA?AEL=>ALAHIKIH@AHIJ=JKICACH=FDE?
+IFA?EBE? @=J= IJHAI AC HJD )AHE?= I=AI LI
+
+&$')FH JD=J?IJABBA?JELAO>==?AALAIB
+@=J=KJEEJOMEJD@=J==L=E=>EEJOKIECL=HEKIA@E=
+
+1JAH=JE=I=AIBBAH?BE?JECHEIK=HLEAMIBJDA
+AJAHFHEIAJD=JMDEAEFHJ=JBHBAA@ECJH=I=?JE=
+
+IOIJAIFHLE@A]IECALAHIEBJDAJHKJD^CELECHEIA
+JE?IEIJA?OEJDAM=OAJAHFHEIAB=?JEIBK?JE
+
+9DEAAJAHFHEIAIIJHKCCAJ?IE@=JAIOIJAI=@
+?=FIAHA@K@=J@=J=>=IAIJA=>ACHA=JAHFAH=
+
+Business Impact
+
+Attention to data management, particularly in a
+climate  of  e-commerce,  and  greater  need  for
+collaboration can enable enterprises to achieve
+greater returns on their information assets.
+
+Copyright © 2001 META Group Inc. APPLICATION DELIVERY STRATEGIES is published by META Group Inc., 208 Harbor Drive, P.O. Box 120061, Stamford, CT 06912-0061.
+Phone: (203) 973-6700. Fax: (203) 359-8066. Web: metagroup.com. This publication may not be reproduced in any form or by any electronic or mechanical means, including
+information storage and retrieval systems, without prior written permission. All rights reserved. Reprints are available.
+
+ 
+
+a
+t
+l
+e
+D
+A
+T
+E
+M
+
+M
+E
+T
+A
+D
+e
+l
+t
+a
+
+ 
+
+_ EEJEC@=J=?A?JA@JJD=JMDE?DME>AALAH=CA@
+
+>O?KHHAJHEEAJ>KIEAIIFH?AIIAI
+
+_ EEJEC?AHJ=E==OJE?IJHK?JKHAIJ=FAH?AJ=CAB
+
+IJ=JEIJE?=OL=E@I=FA@=J=
+
+_ 2HBEEC @=J= IKH?AI J E@AJEBO =@ IK>IAGKAJO
+
+AEE=JAHA@K@=?EAI
+
+?D=CAJH=I=JEA?D=EIIME>A>KEJEJIJ
+,*5I*KJKJEJDA=FFFHJBEIFH=MF=HJE?K=H
+
+OMDA>=IA@=]IJH=JACO^B=KJKIIBJM=HA
+EFAAJ=JEI@KAJA?AH?AIKJEE=JK
+
+HEJOE?HA=IA@F=HJAHIDEFI=@)=?JELEJOEJAIEBEAI
+@=J=L=HEAJO?D=ACAI)JJAFJIJHAILA@=J=L=HEAJO
+
+_ EJHEC@=J=KI=CAJ@AJAHEA]?@IFJI^B
+KKIA@@=J=JD=J?=>AAEE=JA@HBB=@A@J
+
+EIIKAI KIJ >A =FFH=?DA@ =I = CEC A@A=LH
+A?F=IIECJDABMECJA?DEGKAI
+
+J=FAAC)>A*-5OIJAI6AAH=
+
+_ KJIKH?EC @=J= ==CAAJ =JCAJDAH AC
+
+-,51*
+
+_ ,=J= FHBEEC AC ,=J= AJHI AJ=CAEN J
+@EI?LAHDE@@AHA=JEIDEFI=@HAILAE?IEI
+
+JA?EAI=?HIIKJEFA@=J=IKH?AIIAA),5,AJ=
+&'& !)KC 
+
+,=J= 8A?EJO -?AH?A D=I =I E?HA=IA@
+FEJBEJAH=?JE21IFAA@=@?IAGKAJOJDA
+
+_ :>=IA@@=J=BH=J]KELAHI=JH=I=JHI^JD=JE
+FHJ@=J=EJIJ=@=H@:@?KAJIBHANFHJEJ
+
+F=?A@=J=KIA@JIKFFHJEJAH=?JEI=@CAAH=JA@>O
+EJAH=?JEI )I 21 FAHBH=?A EI E?HA=IECO FAH
+
+=JDAH@=J=BH=JACEB5D=H:5KJEI
+
+_ -JAHFHEIA=FFE?=JEEJACH=JE-)1FHA@ABEA@=@=FJ
+
+?AELA@ =I = ?FAJEJELA @EBBAHAJE=JH AC 9A> IEJA
+HAIFIAELAJHO=L=E=>EEJO==OIEIJH=I=?JEAN
+
+AHI AC - 6E>? AH?=JH BH =?GKEHEC =@
+@AELAHEC@=J=>AJMAAM=FFILE=AII=CAGKAKAI
+
+A?KJEH@AHJH=?ECKF@=JAFH@K?JIAHLE?A@AELAHO
+IJEI=HC=E=JE\I=>EEJOJ==CA@=J=LA?EJO
+
+H-)1@ALAFAJEJIBH>KE@EC?KIJ=@=FJAHI
+_ ,=J= =??AII E@@AM=HA AC 1BH=JE *KE@AHI\
+
+4A?CEECJD=J@=J=LA?EJO==CAAJEIK?DHA
+JD==FDOIE?=>=@ME@JD=@FHJ?EIIKAAJAHFHEIAI
+
+-,)535)5)??AII-,*,*+BH@EHA?J
+?A?JELEJO>AJMAA=FFE?=JEI=@@=J=>=IAI
+
+=HAEFAAJEC=H?DEJA?JKH=IKJEIIK?D=I
+_ FAH=JE= @=J= IJHAI ,5I JD=J FAHE@E?=O
+
+_ ,EIJHE>KJA@GKAHO==CAAJIBJM=HAAC-JD
+1B4=O AJ=C JD=J =@@I = @=J= HKJEC =@
+
+ANJH=?JEJACH=JA=@HAHC=EAFH@K?JE@=J=BH
+FAH=JE=EGKEHOHJ=?JE?===OIEI
+
+EJACH=JE EJAECA?A =OAH =>LA ]@K>^ @=J=
+=??AIIE@@AM=HA
+
+_ +=?DAIJD=JFHLE@AEIJ=J=??AIIJJH=I=?JE@=J=
+MDEA>KBBAHEC>=?A@IOIJAIBH=@@EJE==@
+
+_ AJ=@=J===CAAJIKJEIEAHAFIEJHEAI=@
+I?DA=IJ=@=H@IJ?=FJKHA=@=A=L=E=>A@AB
+
+=@ FAHBH=?A @ACH=@=JE KEA ,5I ?=?DAI
+=HAKF@=JA@=??H@ECJ=@=FJELA>KIEAIIHKAI=@
+
+EEJE= AJ=@=J= JD=J ?= DAF FHLE@A ?JANJK=
+?IEIJA?OJAJAHFHEIA@=J=
+
+D=LAI?DA=IJD=JEE?JDA>=?A@IKH?A
+
+_ 2EJJFEJ @=J= HKJEC >AJMAA @=J=>=IAI =@
+
+=FFI AC ,  ,=J=EHHH JD=J ?EH?KLAJI
+DECD=JA?ODK>IFA@AIJD=J=HAHA=FFH
+
+_ )@L=?A@E@ANECJA?DEGKAIBHHA=JECEBJFDOIE?=O
+EJACH=JEC@=J=BL=HEKIE?F=JE>AJOFAIACKJE
+
+A@E=@?KAJIIJHK?JKHA@@=J=>KIEAIIHKAI
+
+FHE=JABHIJH=JACE?==OIEI
+
+_ ,AIECEC=H?DEJA?JKHAIJD=J>==?A@=J==JA?OMEJD=FF
+
+)I MEJD =O IKBBE?EAJO B=IDE=>A JA?DCO
+KIAHI IDK@ ANFA?J @=J= ==CAAJ =HAJF=?A
+
+@=J=HAGKEHAAJI=@@A?EIE?O?AIMEJDKJ=IIKEC
+JDAAJEHAEBH=JEIKFFO?D=EKIJ>AA=HHA=JEA
+
+A>>BM J OEA@ IKJEI JD=J ?IE@=JA
+KJEFA JA?DEGKAIIKJEI JD=J =HA E?HA=IECO
+
+,=J=8=HEAJO6DHKCD !"CHA=JAH>=HHEAHJ
+
+=FFALEHAJ IFA?EBE?
+E
+)@@A@K1IAA?JEC=JA?DEGKAHJA?DCOAJAH
+
+IAA .ECKHA 
+
+ABBA?JELA@=J===CAAJMEANEIJJD=JDAL=HEAJOB
+E?F=JE>A@=J=BH=JI=ECA@@=J=IJHK?JKHAI
+
+FHEIAIIDK@BEHIJFAHBH=EBH=JE=K@EJ=IIAIIEC
+JDAIJ=JKIBJDAEHEBH=JEIKFFO?D=EJE@AJEBO=@
+
+=@ E?IEIJAJ @=J= IA=JE?I *O JDEI JEA EJAH
+
+FHEHEJEAF=HJE?K=H@=J===CAAJEIIKAI
+
+Bottom Line
+
+In 2001/02, IT organizations must look beyond traditional direct brute-force physical approaches to data
+management. Through 2003/04, practices for resolving e-commerce accelerated data volume, velocity,
+and variety issues will become more formalized/diverse. Increasingly, these techniques involve tradeoffs
+and architectural solutions that involve/impact application portfolios and business strategy decisions.
+
+Copyright © 2001 META Group Inc.
+
+ADS 6 Feb 01.949
+
+Application Delivery Strategies
+
+,=JA$.A>HK=HO 
+
+.EA'"')@@A@K
+
+Figure 1 — Data Management Solutions
+
+J Volume
+
+& Tiered storage/hub and spoke
+& Selective data retention
+& Statistical sampling
+& Redundancy elimination
+& Offload “cold” data
+& Outsourcing
+
+J Velocity
+
+E-Business-Driven Information 
+Explosion Factors
+
+Channels
+Channels
+Data Collection
+Data Collection
+Data Retention
+Data Retention
+
+POI Performance
+POI Performance
+
+Info Urgency
+Info Urgency
+
+Pervasive Computing
+Pervasive Computing
+
+& Operational data stores
+& Data caches
+& Point-to-point data routing
+& Balance data latency with decision cycles
+
+J Variety
+
+& Inconsistency resolution
+& XML-based “universal” translation
+& Application-aware EAI adapters
+& Data access middleware and ETLM
+& Distributed query management
+& Metadata management
+
+e
+m
+u
+o
+V
+
+l
+
+Packaged Solutions
+Packaged Solutions
+Partnerships
+Partnerships
+Mergers and Acquisitions
+Mergers and Acquisitions
+DBMS Specialization
+DBMS Specialization
+
+Variety
+
+Velocity
+
+Extending data management options enables 
+
+greater returns on information assets 
+
+Source: META Group
+
+ 
+
+a
+t
+l
+e
+D
+A
+T
+E
+M
+
+Copyright © 2001 META Group Inc. APPLICATION DELIVERY STRATEGIES is published by META Group Inc., 208 Harbor Drive, P.O. Box 120061, Stamford, CT 06912-0061.
+Phone: (203) 973-6700. Fax: (203) 359-8066. Web: metagroup.com. This publication may not be reproduced in any form or by any electronic or mechanical means, including
+information storage and retrieval systems, without prior written permission. All rights reserved. Reprints are available.
+
+M
+E
+T
+A
+D
+e
+l
+t
+a
+
+ 
+
+Copyright © 2001 META Group Inc.
+
+ADS 6 Feb 01.949 Addendum
+
+
