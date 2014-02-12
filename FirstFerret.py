@@ -22,7 +22,7 @@ def extract_xml():
     except:
       continue
     print(doc)
- #find_repeats()
+ #find_repeats() # this calls the function that raises the error
 
 # find repeats of phrases in the document. 
 # Note: only accepts plain text, not xml
@@ -30,7 +30,7 @@ def find_repeats():
   global doc
   global phrases
   for phrase in phrases.items():
-    doc.count(phrase)
+    appearances = doc.count(phrase) # this is the broken line of code
     #if phrase in doc:
     phrases[phrase] += appearances
 
