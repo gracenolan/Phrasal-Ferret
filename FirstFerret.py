@@ -4,6 +4,7 @@ import codecs
 from lxml import etree  # Lets use this as the xml parser, it has some more features :D
 import sys
 import fnmatch
+import ScholarScrape
 
 # This is Phrasal Ferret's collection of phrases 
 # dictionary of phrases with a count of how often they appear 
@@ -15,7 +16,7 @@ doc = ""
 def extract_xml():
   global doc
   root = tree.getroot()
-  allChars = root.findall(".//*[@font]")
+  allChars = root.findall(".//text")
   for char in allChars:
     try:
       doc += char.text
@@ -56,7 +57,8 @@ def find_italic(textline):
       # is this the start of a a new phrase?
       elif "Italic" in text.get("font"):
         # save the last phrase before starting a new one
-        if len(italic_phrase) > 2: 
+        if len(italic_phrase) > 2:
+          italic_phrase = italic_phrase.strip()
           if not italic_phrase in phrases:
             phrases[italic_phrase] = 1
           else:
@@ -68,6 +70,9 @@ def find_italic(textline):
 
       else:
         continue
+    elif len(italic_phrase) > 0: # if there is no font, add a space
+      #italic_phrase = italic_phrase.strip()
+      italic_phrase += " "
 
 # Phrasal Ferret excitedly wiggles it's nose! 
 # It scuttles along the branches in search for tasty text he can analyse. 
@@ -113,13 +118,8 @@ elif fnmatch.fnmatch(sys.argv[1], "*.xml"):
 else:
   print("Phrasel Ferret farts in your general direction.")
 
-# grab the plain txt version of the file for easier reinforcement scanning
-filename.replace(".xml", ".txt")
-try:
-  doc = open(filename, encoding= "UTF-8")
-except:
-  print("it would have been nice if you extracted that doc as a .txt file too. Makes it easier for scanning ^_^")
-  extract_xml()
+# convert to plain text and find recurrances 
+extract_xml()
 
 # What did Phrasal Ferret find? Here are the results 
 print(str(len(phrases)) +  " italic phrases found")
@@ -128,7 +128,13 @@ print("The most common italic phrase is:")
 print(key, phrases[key])
 
 
-
-print("done")
-raise SystemExit
+query = raw_input("Would you like to search Google Scholar for this phrase? yes/no\n")
+if query == "yes":
+  print("Searching...")
+  ScholarScrape.search(key)
+elif query == "no":
+  print("done")
+  raise SystemExit
+else:
+  print("Please choose 'yes' or 'no' ")
 
