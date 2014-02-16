@@ -53,13 +53,14 @@ def get_title(text):
 
    # is this a text element with a size?
   if text.get("size"):
-    size = text.get("size")
+    size = float(text.get("size"))
       
     #print(size)
-
+    count = 0
     if size > last_text_size:
-      temp = text.text
       last_text_size = size
+      temp = text.text
+      count += 1
 
     elif size == last_text_size:
       temp += text.text 
@@ -67,7 +68,8 @@ def get_title(text):
 
     elif size < last_text_size:
       temp = temp.strip()
-      if len(temp) < len(title): # assuming titles will be the biggest and longest
+      print(count)
+      if len(temp) > len(title): # assuming titles will be the biggest and longest
         title = temp
 
   else: # if there is no char in this element, add a space
