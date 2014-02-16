@@ -11,6 +11,14 @@ import ScholarScrape
 phrases = {}
 filename = ""
 doc = "" 
+font = ""
+italic_phrase = ""
+last_text_size = 0
+title = ""
+temp = ""
+size = 0
+page = 0
+
 # Phrasal Ferret wants some new phrases! Will he find anything?
 # He looks through the leaves (elements) to see what he can find
 def extract_xml():
@@ -35,34 +43,36 @@ def find_repeats():
     #if phrase in doc:
     phrases[key] += appearances
 
-
-# globals to hold continuity of phrases
-font = ""
-italic_phrase = ""
-last_text_size = 0
-title = ""
-
-# if I come across a char that is if it is less than, ignore it
-# if it is equal to then I should add it
-# if it greater than, I should replace the current title with it
-
-
+# Phrasal Ferret thinks italic phrases are damn tasty
+# this function finds all of the italic phrases
 def get_title(text):
-  global last_text_size 
   global title
+  global size
+  global last_text_size # is -1 if title ended
+  global temp
 
-  if text.get("size") > last_text_size: #is this the biggest we have seen so far?
-    print last_text_size
-    last_text_size = text.get("size")
-    print last_text_size
-    title = text.text
+   # is this a text element with a size?
+  if text.get("size"):
+    size = text.get("size")
+      
+    #print(size)
 
-  #elif text.get("size") < last_text_size: #is the next char smaller?
-   # last_text_size = -1
-    #print title
-  elif text.get("size") == last_text_size: # is the title, so add this character to the title
-    title += text.text
-    print title
+    if size > last_text_size:
+      temp = text.text
+      last_text_size = size
+
+    elif size == last_text_size:
+      temp += text.text 
+      #print(temp)
+
+    elif size < last_text_size:
+      temp = temp.strip()
+      if len(temp) < len(title): # assuming titles will be the biggest and longest
+        title = temp
+
+  else: # if there is no char in this element, add a space
+    temp += " "
+
 
 # Phrasal Ferret thinks italic phrases are damn tasty
 # this function finds all of the italic phrases
@@ -71,13 +81,14 @@ def find_italic(textline):
   global font
   global size
   global last_text_size # is -1 if title ended
+  global page
 
   for text in textline:
     if not text.tag == "text":
       continue
     
-    if text.get("size") >= last_text_size: # if we don't already have the title
-        get_title(text)
+    if page == '1':
+      get_title(text)
     # else continue the check
 
     # Is this char part of the current phrase?
@@ -108,6 +119,8 @@ def find_italic(textline):
 # Phrasal Ferret excitedly wiggles it's nose! 
 # It scuttles along the branches in search for tasty text he can analyse. 
 def find_text():
+  global page
+
   root = tree.getroot()
 
   # are there leaves on this tree?
@@ -117,6 +130,11 @@ def find_text():
     # climb through the first branches
     for child in root:
 
+      # Grab the page number
+      if child.tag == "page":
+        page = child.get("id")
+        print(page)
+      
       # Get the textbox
       for textbox in child:
         if not textbox.tag == "textbox":
