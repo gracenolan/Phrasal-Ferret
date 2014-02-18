@@ -6,21 +6,20 @@ import sys
 import fnmatch
 import ScholarScrape
 
-# This is Phrasal Ferret's collection of phrases 
-# dictionary of phrases with a count of how often they appear 
-phrases = {}
+# This is Phrasal Ferret's collection of global variables
+phrases = {}          # Dictionary of phrases and frequencies 
 filename = ""
-doc = "" 
-font = ""
-italic_phrase = ""
-last_text_size = 0
+doc = ""              # Holds the plain text vers of the doc
+font = ""             # keep track of fonts used (for finding italics)
+italic_phrase = ""    # temp phrase value 
+last_text_size = 0    # value to track varing font sizes (for finding title)
 title = ""
-temp = ""
+temp = ""             # holds the temporary title 
 size = 0
 page = 0
 
-# Phrasal Ferret wants some new phrases! Will he find anything?
-# He looks through the leaves (elements) to see what he can find
+# Phrasal Ferret wants some new phrases! But first it needs plain text, not xml
+# It strips the branches of all the useful leaves to get plain text
 def extract_xml():
   global doc
   root = tree.getroot()
@@ -30,11 +29,12 @@ def extract_xml():
       doc += char.text
     except:
       continue
-    #print(doc)
   find_repeats() # this calls the function that raises the error
 
-# find repeats of phrases in the document. 
-# Note: only accepts plain text, not xml
+# Phrasal Ferret liked those italic phrases so much
+# Now it wants to find those phrases again!
+# This looks for repeats of phrases in the document. 
+# Note: only accepts plain text, not xml.
 def find_repeats():
   global doc
   global phrases
@@ -43,34 +43,27 @@ def find_repeats():
     #if phrase in doc:
     phrases[key] += appearances
 
-# Phrasal Ferret thinks italic phrases are damn tasty
-# this function finds all of the italic phrases
 def get_title(text):
   global title
   global size
   global last_text_size # is -1 if title ended
   global temp
 
-   # is this a text element with a size?
+  # is this a text element with a size?
   if text.get("size"):
     size = float(text.get("size"))
-      
-    #print(size)
-    count = 0
-    if size > last_text_size:
-      last_text_size = size
-      temp = text.text
-      count += 1
 
-    elif size == last_text_size:
-      temp += text.text 
-      #print(temp)
+  if size > last_text_size:
+    last_text_size = size
+    temp = text.text
 
-    elif size < last_text_size:
-      temp = temp.strip()
-      print(count)
-      if len(temp) > len(title): # assuming titles will be the biggest and longest
-        title = temp
+  elif size == last_text_size:
+    temp += text.text 
+
+  elif size < last_text_size:
+    temp = temp.strip()
+    if len(temp) > len(title): # assuming titles will be the biggest and longest
+       title = temp
 
   else: # if there is no char in this element, add a space
     temp += " "
@@ -82,16 +75,16 @@ def find_italic(textline):
   global italic_phrase
   global font
   global size
-  global last_text_size # is -1 if title ended
+  global last_text_size
   global page
 
   for text in textline:
     if not text.tag == "text":
       continue
-    
+
+    # Grab the title from the first page
     if page == '1':
       get_title(text)
-    # else continue the check
 
     # Is this char part of the current phrase?
     if text.get("font"):
@@ -108,14 +101,13 @@ def find_italic(textline):
           else:
             phrases[italic_phrase] += 1
 
-       # clear old phrase and save the new one
+        # clear old phrase and save the new one
         italic_phrase = text.text
         font = text.get("font")
 
       else:
         continue
     elif len(italic_phrase) > 0: # if there is no font, add a space
-      #italic_phrase = italic_phrase.strip()
       italic_phrase += " "
 
 # Phrasal Ferret excitedly wiggles it's nose! 
@@ -135,8 +127,7 @@ def find_text():
       # Grab the page number
       if child.tag == "page":
         page = child.get("id")
-        print(page)
-      
+
       # Get the textbox
       for textbox in child:
         if not textbox.tag == "textbox":
@@ -149,8 +140,20 @@ def find_text():
 
           find_italic(textline)
 
+def search_google():
+  query = raw_input("Would you like to search Google Scholar for this paper and its most common phrase? yes/no\n")
+  if query == "yes":
+    print("Searching...")
+    ScholarScrape.search(title + key)
+  elif query == "no":
+    print("done")
+    raise SystemExit
+  else:
+    print("**Please choose 'yes' or 'no'**")
+    search_google()
 
-# ---- This is where the first block of the program where the file is read ---- #
+
+# ---- This is Phrasal Ferret's starting point, the first block of the program  ---- #
 
 if len(sys.argv) != 2:
   print("Usage: FirstFerret.py <xml file> \nPhrasel Ferret likes to climb xml trees. They have the softest leaves and pleasant smelling flowers. Please try again with an xml file >^_^<")
@@ -177,16 +180,6 @@ print(str(len(phrases)) +  " italic phrases found")
 key = max(phrases, key=phrases.get)
 print("The most common italic phrase is:")
 print(key, phrases[key])
-print(title)
+print("title: " + title)
 
-
-query = raw_input("Would you like to search Google Scholar for this phrase? yes/no\n")
-if query == "yes":
-  print("Searching...")
-  ScholarScrape.search(title + key)
-elif query == "no":
-  print("done")
-  raise SystemExit
-else:
-  print("Please choose 'yes' or 'no' ")
-
+search_google()

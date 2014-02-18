@@ -1,18 +1,28 @@
-PHRASAL FERRET welcomes you to its humble abode! 
 
-Phrasal Ferret looks for phrases in academic documents.
-It finds the phrases that are in Bold. Then it sees how many times these phrases appear.
+----This is Phrasal Ferret!----
+
+The purpose of Phrasal Ferret is to research the identification of new formalistions.
+It was created as a summer research project under the University of Waikato.
+Supervisor: Dr Craig Schock.
+
+Phrasal Ferret looks for the most common phrase in an academic document.
+It finds the phrases that are italised. Then it sees how many times these phrases appear.
+This is to try and search for what is possibily a new formalisation.
 
 Before you ask Phrasal Ferret to find those phrases, you need to have the document
-you want to scan extracted to xml format. pdf2txt.py (a program some other dude 
-wrote) can extract text as xml from pdf documents.
+you want to scan extracted to xml format.
 
-I have included a document I've used as test data. This is called 3vs.xml
+PLEASE USE pdf2txt.py to extract text as xml from pdf documents.
+I have hard coded to read the xml structure pdf2txt outputs.
+I have included a document I've used as test data. This is called ff_med.xml
 
-To unlesh Phrasal Ferret, run the follow in commandline:
-$ python FirstFerret.py 3vs.xml 
+To give Phrasal Ferret a test run, put the following in commandline:
+$ python PhrasalFerret.py ff_med.xml 
 
-Currently Phrasal Ferret will print out the document, then at the bottom say how many 
-phrases it has found and which one is the most common. 
-The count here isn't accurate as it is only counting the first occurance of the phrase.
-I am currently working on making it count how often those phrase appear.
+It will tell you the most common phrase, how often it appears and the title of the document.
+The program will ask you if you would like to search for this in Google Scholar.
+Please use this option sparingly!
+Google doesn't exactly like it when their websites are scraped for data...
+This option will return the top ten results for related documents.
+
+
